@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#5c48bb">
+<title>COMUNICA · Lectura activa para secundaria</title>
+<meta name="description" content="Aula de Comunicación para secundaria: lecturas, subrayado y acceso docente.">
+<style>
+:root{--violet:#6950c4;--deep:#261c4c;--ink:#25304a;--muted:#66738c;--line:#e5e5f0;--orange:#ee9223;--red:#dc4a5d;--blue:#2d7fd2;--green:#22a274;--paper:#fff;--background:#f9f7ff;--shadow:0 24px 70px rgba(46,32,107,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 8% 9%,#eee6ff,transparent 28%),radial-gradient(circle at 100% 65%,#e6f8f5,transparent 27%),var(--background);font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);min-height:100vh}a{color:inherit;text-decoration:none}button,input{font:inherit}button,.button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #8e72e9;outline-offset:3px}section[hidden],div[hidden],aside[hidden],nav[hidden]{display:none!important}button:disabled{cursor:not-allowed;opacity:.55}
+.wrap{max-width:1160px;margin:auto;padding:25px 28px}.topbar{display:flex;gap:16px;justify-content:space-between;align-items:center}.brand{display:flex;align-items:center;gap:11px;font-weight:900;color:var(--deep);font-size:17px;letter-spacing:-.035em}.brand-icon{width:47px;height:47px;display:grid;place-items:center;border-radius:16px;background:linear-gradient(145deg,#8465ef,#5635b6);color:white;box-shadow:0 10px 24px #7c62d452;font-size:27px}.nav{display:flex;gap:20px;color:#5a5e78;font-size:13px;font-weight:750}.nav button{padding:8px 0;background:none;border:0;color:inherit;font-weight:750}.nav button:hover{color:#563cb3}.chip{font-size:12px;color:#6c4dc2;letter-spacing:.105em;font-weight:850;text-transform:uppercase}.footer{text-align:center;color:#8991aa;font-size:12px;padding:35px 12px 16px}.button{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:13px 21px;font-weight:850;font-size:14px;border-radius:13px;border:0;box-shadow:0 8px 17px #43337c13;transition:transform .15s,box-shadow .15s}.button:hover{transform:translateY(-2px);box-shadow:0 12px 23px #43337c22}.button.primary{background:#6850c9;color:#fff}.button.blue{background:#337cdb;color:white}.button.pale{background:#f0eaff;color:#5e49b0}.button.white{background:white;color:#5741a3}.button.secondary{background:white;color:#526079;border:1px solid #e1e4ef}
+.hero{margin:36px 0 25px;background:linear-gradient(112deg,#5140a7,#7350d8 70%,#8d65dc);border-radius:29px;min-height:354px;display:grid;grid-template-columns:1.25fr .75fr;overflow:hidden;box-shadow:0 25px 60px #6751c448;position:relative;color:white}.hero:before{content:"";width:420px;height:420px;border:2px solid #ffffff23;border-radius:50%;position:absolute;right:-120px;top:-175px}.hero:after{content:"";width:310px;height:310px;border:2px solid #ffffff1f;border-radius:50%;position:absolute;left:43%;bottom:-240px}.hero-copy{padding:51px 20px 52px 54px;position:relative;z-index:1}.hero-eyebrow{color:#ffdd97;letter-spacing:.15em;font-weight:850;font-size:12px}.hero h1{font-size:clamp(36px,4.4vw,57px);line-height:1.095;letter-spacing:-.052em;margin:18px 0 17px;max-width:680px}.hero h1 span{color:#ffcb66}.hero p{line-height:1.6;font-size:15px;color:#f0eaff;max-width:515px;margin:0}.hero-art{align-self:center;position:relative;z-index:1;min-height:316px;display:flex;align-items:center;justify-content:center}.book{width:230px;height:245px;border-radius:16px 27px 23px 16px;transform:rotate(13deg);background:linear-gradient(155deg,#fffef7 70%,#efe8fd);box-shadow:0 18px 0 #d1c6e6,0 34px 36px #2d236c66;position:relative;border:9px solid #fcfaf3}.book:before{content:"✦  LECTURA  ✦";position:absolute;top:45px;left:20px;right:20px;text-align:center;color:#7356be;font-weight:900;font-size:18px;letter-spacing:.03em}.book:after{content:"☷  ☷  ☷";position:absolute;bottom:58px;left:20px;right:20px;text-align:center;color:#ecb05b;font-size:25px;letter-spacing:8px}.star{position:absolute;color:#ffd47e;font-size:35px}.s1{top:45px;left:30px}.s2{bottom:28px;right:15px;font-size:26px}.lead{margin-top:28px}.lead h2{font-size:25px;color:#2c2849;letter-spacing:-.04em;margin:5px 0 8px}.lead p{margin:0;color:#6c7690;font-size:14px}.roles{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:18px}.role-card{background:white;border:1px solid #e5e3f1;border-radius:22px;padding:27px;box-shadow:0 9px 32px #4035750d;display:flex;flex-direction:column;align-items:flex-start;min-height:260px;position:relative;overflow:hidden}.role-card:after{content:"";height:150px;width:150px;border-radius:50%;position:absolute;right:-76px;top:-65px;background:#eee9ff;opacity:.7}.role-card.student:after{background:#e0f0ff}.role-icon{display:grid;place-items:center;font-size:28px;height:63px;width:63px;border-radius:19px;background:#e9e6fc;margin-bottom:16px}.role-card.student .role-icon{background:#e4f0ff}.role-card h3{font-size:21px;letter-spacing:-.03em;margin:0 0 8px}.role-card p{color:#71809a;font-size:13px;line-height:1.6;margin:0 0 24px;max-width:400px}.role-card .button{margin-top:auto}.tips{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 0}.tip{padding:10px 14px;background:white;border:1px solid var(--line);border-radius:100px;color:#596680;font-size:12px;font-weight:650}
+.notice{display:flex;gap:10px;align-items:flex-start;padding:13px 17px;border:1px solid #e7dfd1;background:#fffaf0;border-radius:14px;font-size:12px;line-height:1.6;color:#6c5c39;margin:20px 0 0}.notice strong{color:#705019}.notice.live{background:#f0faf6;border-color:#d6eee1;color:#26664d}.notice.live strong{color:#205e42}
+.form-shell{max-width:515px;margin:50px auto 8px}.form-card{background:white;border:1px solid #e8e4f4;border-radius:26px;box-shadow:var(--shadow);padding:38px}.back{font-size:13px;font-weight:750;color:#64529d;display:inline-flex;align-items:center;gap:7px;background:none;border:0;padding:0}.form-icon{font-size:29px;width:65px;height:65px;background:#efe9ff;border-radius:19px;display:grid;place-items:center;margin:28px 0 18px}.form-card h1{font-size:30px;letter-spacing:-.04em;line-height:1.18;margin:0 0 12px;color:#2a2149}.form-card p{color:#67758f;font-size:14px;line-height:1.65;margin:0 0 26px}.form-label{font-size:13px;font-weight:850;margin:0 0 9px;display:block}.form-input{width:100%;border:1px solid #dce1ec;border-radius:12px;background:#fcfcff;min-height:51px;font-size:15px;padding:13px 15px;color:#283049;outline:0}.form-input:focus{border-color:#775cc9;box-shadow:0 0 0 3px #8065d426}.field{margin-bottom:20px}.form-card .button{width:100%;margin:6px 0 15px}.note{background:#f6f3ff;border:1px solid #ebe5fc;border-radius:13px;padding:13px 15px;line-height:1.55;color:#625b82;font-size:12px;margin-top:13px}.note strong{color:#48378d}.alert{background:#fff0f0;color:#a2364b;border:1px solid #f6cbd2;border-radius:13px;font-size:13px;padding:12px 14px;margin:0 0 16px}
+.panel-header{display:flex;align-items:flex-start;justify-content:space-between;gap:25px;margin:49px 0 28px}.panel-header h1{font-size:34px;letter-spacing:-.05em;margin:9px 0 7px;color:#2a2449}.panel-header p{color:#788098;font-size:14px;margin:0}.panel-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-bottom:19px}.stat{border:1px solid #e8e5f0;background:white;padding:22px 25px;border-radius:20px;box-shadow:0 7px 21px #3529760c}.stat span{font-size:13px;color:#7c829c;font-weight:700}.stat strong{display:block;color:#6850bf;font-size:36px;letter-spacing:-.05em;margin-top:9px}.table-card{background:white;border:1px solid #e6e5ef;border-radius:19px;box-shadow:0 14px 35px #33256e0d;overflow:hidden}.table-head{padding:22px 24px;border-bottom:1px solid #edf0f5;display:flex;justify-content:space-between;align-items:center;gap:10px}.table-head h2{margin:0;color:#2d2848;font-size:18px}.table-scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;text-align:left;min-width:520px}th{background:#fbfaff;color:#66708d;font-size:12px;letter-spacing:.02em}td,th{padding:15px 24px;border-bottom:1px solid #eef0f4}td{font-size:13px;color:#4d576f}tr:last-child td{border-bottom:0}.empty{text-align:center;padding:38px;color:#8b91aa}
+.reading-header{margin:31px 0 24px;padding-left:62px}.reading-header h1{font-size:clamp(30px,4vw,44px);letter-spacing:-.045em;margin:10px 0;color:#2c2848}.reading-header p{font-size:14px;color:#697792;line-height:1.7}.reading-layout{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:22px;padding-left:62px}.paper{min-width:0;background:white;border:1px solid #e4e4ee;border-radius:23px;box-shadow:var(--shadow);overflow:hidden}.paper-head{padding:15px 28px;border-bottom:1px solid #edeef4;display:flex;justify-content:space-between;gap:10px;color:#788099;font-size:12px}.paper-body{padding:30px clamp(22px,4vw,46px) 43px}.category{font-size:12px;font-weight:800;text-transform:uppercase;color:#8c75a8;letter-spacing:.08em}.reading-title{font-family:Georgia,serif;font-size:clamp(27px,3.3vw,39px);line-height:1.2;color:#222d43;margin:12px 0 24px}.text-body{font-family:Georgia,'Times New Roman',serif;font-size:18px;line-height:1.94;color:#2c364a;overflow-wrap:break-word}.text-body p{margin:0 0 22px}.text-body p:last-child{margin-bottom:0}.word{border-radius:2px;-webkit-box-decoration-break:clone;box-decoration-break:clone;transition:background .09s}.word[data-mark="orange"]{background:#fff0d8;text-decoration:underline;text-decoration-color:var(--orange);text-decoration-thickness:3px;text-underline-offset:4px}.word[data-mark="red"]{background:#ffe3e6;text-decoration:underline;text-decoration-color:var(--red);text-decoration-thickness:3px;text-underline-offset:4px}.word[data-mark="blue"]{background:#e3f0ff;text-decoration:underline;text-decoration-color:var(--blue);text-decoration-thickness:3px;text-underline-offset:4px}.word[data-mark="green"]{background:#dff5e8;text-decoration:underline;text-decoration-color:var(--green);text-decoration-thickness:3px;text-underline-offset:4px}.annotation[data-mode="paint"] .word{cursor:crosshair}.annotation[data-mode="erase"] .word{cursor:cell}.annotation[data-mode="cursor"] .word{cursor:auto}.annotation[data-mode="paint"],.annotation[data-mode="erase"]{touch-action:none}.side-card{background:white;border:1px solid #e6e5f0;border-radius:20px;padding:21px;box-shadow:0 9px 32px #4035750d;position:sticky;top:18px}.side-card h3{margin:0 0 16px;color:#2f2b51;font-size:17px}.legend-row{display:flex;align-items:center;gap:10px;padding:12px 0;border-top:1px solid #edf0f4;font-size:12px;color:#5c667c}.swatch{width:17px;height:17px;flex:none;border-radius:6px;display:inline-block}.swatch.orange{background:#f0a447}.swatch.red{background:#e95469}.swatch.blue{background:#358cdb}.swatch.green{background:#28ab7a}.small{font-size:12px;line-height:1.6;color:#71809a}.action-strip{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}.small-button{border-radius:10px;background:#f7f5fe;border:1px solid #e9e2f7;padding:9px 12px;font-weight:750;color:#6555a2;font-size:12px;cursor:pointer}.small-button:hover{background:#eeebfa}.reading-meta{font-size:12px;color:#697792}
+.tool-rail{position:fixed;z-index:25;left:max(12px,calc((100vw - 1160px)/2 - 35px));top:36%;display:flex;flex-direction:column;gap:5px;padding:7px;background:white;border:1px solid #e6e3f2;border-radius:18px;box-shadow:0 14px 34px #322b7530}.tool{display:grid;place-items:center;border:0;background:white;color:#69718f;width:46px;height:47px;border-radius:12px;position:relative}.tool:hover{background:#f4f1ff}.tool[aria-pressed="true"]{background:#eae5ff;color:#6046b6}.tool svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.tool[data-tool="pencil"]:after{content:"";width:9px;height:9px;border-radius:50%;background:var(--active-color,#e14b5c);position:absolute;right:6px;bottom:5px;border:2px solid white}.rail-sep{width:25px;height:1px;background:#e8e6f1;margin:1px auto}.palette{position:fixed;z-index:30;left:max(71px,calc((100vw - 1160px)/2 + 21px));top:36%;width:min(295px,calc(100vw - 80px));padding:16px;border-radius:20px;background:white;border:1px solid #e5e2f1;box-shadow:0 24px 60px #2a1b6350}.palette-title{display:flex;justify-content:space-between;align-items:center;gap:9px;margin-bottom:7px}.palette-title strong{color:#392e6b;font-size:15px}.close-palette{border:0;background:#f4f2f8;width:27px;height:27px;border-radius:50%;font-size:18px}.palette>p{font-size:12px;line-height:1.5;color:#75809a;margin:0 0 10px}.color-button{border:1px solid transparent;background:white;display:flex;align-items:center;gap:11px;padding:10px;width:100%;text-align:left;border-radius:12px}.color-button:hover{background:#f6f3ff;border-color:#ebe4ff}.color-button strong{font-size:12px;color:#31405a}.color-button small{display:block;font-size:10px;color:#8791a6;margin-top:3px}.color-button[aria-pressed="true"]{background:#eeeafa}.status{background:#f1effa;color:#5d5481;border-radius:12px;padding:12px 13px;font-size:12px;line-height:1.6;margin-top:13px}.foot-link{border:0;background:none;color:#6650bc;font-weight:780;font-size:12px;padding:7px 0;cursor:pointer}
+@media(max-width:850px){.hero{grid-template-columns:1fr}.hero-copy{padding:41px 35px 25px}.hero-art{min-height:235px}.book{width:180px;height:185px}.book:before{font-size:13px}.book:after{bottom:37px}.roles{grid-template-columns:1fr}.hero h1{font-size:41px}.panel-header{flex-direction:column}.reading-layout{grid-template-columns:1fr;gap:16px}.side-card{position:static}.reading-header,.reading-layout{padding-left:57px}.tool-rail{left:9px}.palette{left:67px}.stats{grid-template-columns:1fr 1fr}}
+@media(max-width:550px){.wrap{padding:15px}.nav{gap:10px;font-size:11px}.brand{font-size:13px}.brand-icon{width:38px;height:38px;font-size:23px}.hero{margin:22px 0}.hero-copy{padding:36px 23px 23px}.hero h1{font-size:34px}.hero p{font-size:13px}.roles{gap:12px}.role-card{min-height:245px;padding:22px}.form-shell{margin:23px auto}.form-card{padding:25px 19px}.form-card h1{font-size:26px}.panel-header{margin-top:28px}.panel-header h1{font-size:28px}.panel-actions .button{font-size:12px;padding:10px 13px}.stat{padding:17px}.stat strong{font-size:29px}.reading-header{padding-left:0;margin:20px 0}.reading-layout{padding-left:0}.tool-rail{bottom:12px;top:auto;left:50%;transform:translateX(-50%);flex-direction:row;padding:7px}.rail-sep{width:1px;height:25px;margin:auto 2px}.palette{top:auto;left:50%;transform:translateX(-50%);bottom:82px;width:min(318px,calc(100vw - 22px))}.reading-header h1{font-size:32px}.paper-body{padding:23px 21px 30px}.text-body{font-size:16.5px;line-height:1.85}.reading-layout{padding-bottom:70px}.paper-head{padding:14px 20px}.reading-title{font-size:29px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="topbar">
+    <a class="brand" href="#inicio" id="site-brand"><span class="brand-icon" aria-hidden="true">📖</span><span>COMUNICA · Secundaria</span></a>
+    <nav class="nav" aria-label="Navegación principal"><button type="button" data-page="inicio">Inicio</button><button type="button" data-page="docente">Docente</button></nav>
+  </header>
+  <div id="connection-message" class="notice" role="status">Cargando el estado de conexión…</div>
+  <main>
+    <section id="page-inicio" data-page-area>
+      <section class="hero" aria-labelledby="hero-title"><div class="hero-copy"><div class="hero-eyebrow">✦ CURSO DE COMUNICACIÓN ✦</div><h1 id="hero-title">Cada lectura abre <span>un mundo de ideas.</span></h1><p>Lee, comprende, identifica y subraya lo más importante. Un espacio para aprender Comunicación a tu ritmo.</p></div><div class="hero-art" aria-hidden="true"><span class="star s1">✦</span><div class="book"></div><span class="star s2">✳</span></div></section>
+      <section class="lead"><div class="chip">Elige tu acceso</div><h2>¿Cómo quieres ingresar?</h2><p>Selecciona tu modalidad para comenzar.</p></section>
+      <div class="roles"><article class="role-card student"><span class="role-icon" aria-hidden="true">🎒</span><h3>Soy estudiante</h3><p>Ingresa tu nombre completo, recibe una lectura al azar y subraya con el lápiz, cursor y borrador.</p><button class="button blue" data-page="estudiante">Ingresar como estudiante <span aria-hidden="true">→</span></button></article><article class="role-card"><span class="role-icon" aria-hidden="true">👩‍🏫</span><h3>Soy docente</h3><p>Accede al registro privado de ingresos. Consulta los nombres y descarga el archivo CSV para Excel.</p><button class="button pale" data-page="docente">Ingresar como docente <span aria-hidden="true">→</span></button></article></div>
+      <div class="tips" aria-label="Leyenda de subrayado"><span class="tip">🟠 Título</span><span class="tip">🔴 Idea principal</span><span class="tip">🔵 Idea secundaria</span><span class="tip">🟢 Idea terciaria</span><span class="tip">✍️ Subrayado interactivo</span></div>
+    </section>
+
+    <section id="page-estudiante" data-page-area hidden>
+      <div class="form-shell"><div class="form-card"><button type="button" class="back" data-page="inicio">← Volver al inicio</button><div class="form-icon" aria-hidden="true">🎒</div><h1>¡Bienvenido a tu aula!</h1><p>Escribe tu nombre completo para comenzar la actividad de comprensión lectora. Aparecerá una lectura elegida al azar.</p>
+        <form id="student-form" novalidate><div class="field"><label class="form-label" for="student-name">Nombre completo</label><input id="student-name" name="nombre" class="form-input" type="text" autocomplete="name" minlength="5" maxlength="90" placeholder="Ejemplo: Ana María Flores" required></div><div id="student-error" class="alert" role="alert" hidden></div><button class="button blue" type="submit" id="student-submit">Comenzar mi lectura →</button></form>
+        <div class="note"><strong>Privacidad:</strong> el estudiante no puede ver la lista de ingresos. En la versión publicada, su nombre se registra en el servidor y solo el docente autorizado puede consultarlo.</div>
+      </div></div>
+    </section>
+
+    <section id="page-docente" data-page-area hidden>
+      <div class="form-shell"><div class="form-card"><button type="button" class="back" data-page="inicio">← Volver al inicio</button><div class="form-icon" aria-hidden="true">🔐</div><h1>Acceso para docentes</h1><p>Introduce tu usuario y contraseña para consultar los registros de estudiantes de manera privada.</p>
+        <form id="teacher-form"><div class="field"><label for="teacher-user" class="form-label">Usuario</label><input id="teacher-user" class="form-input" name="usuario" type="text" autocomplete="username" placeholder="Usuario docente" required></div><div class="field"><label for="teacher-pass" class="form-label">Contraseña</label><input id="teacher-pass" class="form-input" name="contrasena" type="password" autocomplete="current-password" placeholder="Tu contraseña privada" required></div><div id="teacher-error" class="alert" role="alert" hidden></div><button type="submit" class="button primary" id="teacher-submit">Ingresar al panel →</button></form>
+        <div class="note" id="teacher-notice">La cuenta docente se configura en el servidor; no existe una contraseña de ejemplo.</div>
+      </div></div>
+    </section>
+
+    <section id="page-lectura" data-page-area hidden>
+      <div class="reading-header"><div class="chip">LECTURA ACTIVA · COMUNICACIÓN</div><h1>Lee, comprende y subraya</h1><p><strong id="student-greeting"></strong> Selecciona un color en el lápiz lateral y pasa sobre las palabras. Con el cursor puedes desplazarte sin marcar; con el borrador eliminas marcas.</p><button class="foot-link" type="button" id="student-exit">Terminar sesión y volver al inicio</button></div>
+      <div class="reading-layout"><article class="paper" id="annotation" data-mode="cursor" aria-label="Lectura interactiva"><div class="paper-head"><span>Texto de Comunicación</span><span id="read-wordcount">200 palabras</span></div><div class="paper-body"><div id="reading-category" class="category"></div><h2 id="reading-title" class="reading-title"></h2><div id="reading-body" class="text-body"></div></div></article>
+        <aside class="side-card" aria-label="Leyenda del subrayado"><h3>Guía de colores</h3><div class="legend-row"><span class="swatch orange"></span><span><strong>Naranja:</strong> Título</span></div><div class="legend-row"><span class="swatch red"></span><span><strong>Rojo:</strong> Idea principal</span></div><div class="legend-row"><span class="swatch blue"></span><span><strong>Azul:</strong> Idea secundaria</span></div><div class="legend-row"><span class="swatch green"></span><span><strong>Verde:</strong> Idea terciaria</span></div><div class="status" id="painting-status" role="status" aria-live="polite">Cursor activo. Puedes desplazarte normalmente.</div><div class="action-strip"><button class="small-button" type="button" id="undo" disabled>↶ Deshacer</button><button class="small-button" type="button" id="clear">Borrar todo</button></div><p class="small">Marcas: <strong id="marks-count">0</strong>. Tus subrayados se guardan solo en este navegador, no en los registros del docente.</p></aside>
+      </div>
+      <nav class="tool-rail" id="tool-rail" aria-label="Herramientas de lectura"><button id="tool-cursor" class="tool" type="button" data-tool="cursor" aria-label="Cursor: leer y desplazarse" title="Cursor" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3l14 9-7 1.2L9 20z"/><path d="m12 13 4 7"/></svg></button><div class="rail-sep"></div><button id="tool-pencil" class="tool" data-tool="pencil" type="button" aria-label="Lápiz: desplegar colores" title="Lápiz" aria-expanded="false" aria-pressed="false" style="--active-color:#dc4a5d"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l4.5-1L20 7.5 16.5 4 5 15.5 4 20z"/><path d="m14.5 6 3.5 3.5"/></svg></button><div class="rail-sep"></div><button id="tool-eraser" class="tool" type="button" data-tool="erase" aria-label="Borrador: quitar subrayados" title="Borrador" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 14 9-10a3 3 0 0 1 4.2 0l3 3a3 3 0 0 1 0 4.2l-8 9H7.5L4 17z"/><path d="m9 9 7 7M12 20h9"/></svg></button></nav>
+      <div class="palette" id="palette" hidden role="group" aria-label="Paleta de colores"><div class="palette-title"><strong>Elige un color</strong><button class="close-palette" type="button" id="palette-close" aria-label="Cerrar paleta">×</button></div><p>Selecciona un color. El lápiz marcará las palabras al pasar por encima.</p><button class="color-button" type="button" data-color="orange"><span class="swatch orange"></span><span><strong>Naranja · Título</strong><small>Nombre de la lectura</small></span></button><button class="color-button" type="button" data-color="red"><span class="swatch red"></span><span><strong>Rojo · Idea principal</strong><small>Información más importante</small></span></button><button class="color-button" type="button" data-color="blue"><span class="swatch blue"></span><span><strong>Azul · Idea secundaria</strong><small>Explica la idea principal</small></span></button><button class="color-button" type="button" data-color="green"><span class="swatch green"></span><span><strong>Verde · Idea terciaria</strong><small>Ejemplos y detalles</small></span></button></div>
+    </section>
+
+    <section id="page-panel" data-page-area hidden>
+      <div class="panel-header"><div><div class="chip">ÁREA PRIVADA · DOCENTE</div><h1>Registro de estudiantes</h1><p>Consulta de ingresos del curso de Comunicación.</p></div><div class="panel-actions"><a href="/api/docente/registros.csv" class="button blue" id="download-csv" download="registros_comunicacion.csv">↓ Descargar CSV</a><button type="button" class="button secondary" id="teacher-exit">Cerrar sesión</button></div></div>
+      <div class="stats"><div class="stat"><span>Total de ingresos</span><strong id="total-visits">—</strong></div><div class="stat"><span>Estudiantes distintos</span><strong id="total-unique">—</strong></div></div>
+      <section class="table-card"><div class="table-head"><h2>Historial de accesos</h2><span class="small">Solo visible para docentes autorizados</span></div><div class="table-scroll"><table><thead><tr><th>N.º</th><th>Nombre completo</th><th>Fecha y hora (UTC)</th></tr></thead><tbody id="records-body"><tr><td colspan="3" class="empty">Cargando registros…</td></tr></tbody></table></div></section>
+    </section>
+  </main>
+  <footer class="footer">COMUNICA · Secundaria · Comprender es descubrir</footer>
+</div>
+<script type="application/json" id="readings-data">[{"title": "Leer es abrir una puerta a otros mundos", "category": "Imaginación y descubrimiento", "paragraphs": ["Cuando abrimos un libro, no solo encontramos letras impresas sobre una página. También descubrimos lugares que quizá nunca visitaremos, personajes con ideas diferentes a las nuestras y situaciones que nos invitan a imaginar. Una historia puede llevarnos a una ciudad antigua, a un bosque misterioso o incluso a un futuro que todavía no existe. Lo sorprendente es que cada lector construye esas imágenes en su mente de una manera particular.", "La lectura nos permite detenernos y observar los detalles. Podemos pensar por qué un personaje tomó una decisión, qué habríamos hecho en su lugar o cómo cambiaría la historia si ocurriera algo distinto. Estas preguntas convierten la experiencia de leer en una aventura activa. No hace falta terminar un libro enorme para disfrutarla: un cuento breve también puede despertar muchas ideas.", "Además, leer con frecuencia nos ayuda a conocer palabras nuevas y a expresar mejor lo que sentimos o pensamos. Cada texto ofrece una oportunidad para descubrir algo, aunque sea pequeño. Por eso, dedicar unos minutos a la lectura puede transformar un día común en un momento de curiosidad, reflexión y aprendizaje. Un libro no nos dice exactamente qué imaginar; nos entrega pistas para que nuestra creatividad haga el resto."], "word_count": 200}, {"title": "La lectura nos enseña a pensar mejor", "category": "Comprensión y pensamiento crítico", "paragraphs": ["Leer no significa únicamente pronunciar palabras o llegar hasta la última línea de una página. Comprender un texto implica reconocer sus ideas principales, relacionarlas con lo que ya sabemos y preguntarnos si estamos de acuerdo con ellas. Cuando una noticia, un cuento o un artículo presenta información, podemos observar quién la escribió, qué quiere comunicar y qué razones ofrece para sostener sus afirmaciones.", "Una forma sencilla de practicar esta habilidad es hacer pequeñas pausas durante la lectura. Después de cada párrafo, podemos resumir con nuestras propias palabras lo que sucedió. Si aparece una palabra desconocida, el contexto puede ayudarnos a deducir su significado. También resulta útil imaginar preguntas: ¿qué ocurrió primero?, ¿por qué pasó?, ¿qué información falta? Estas acciones nos permiten comprender de manera más profunda y recordar mejor el contenido.", "La lectura también nos muestra que dos personas pueden interpretar una misma situación de maneras diferentes. Escuchar esas perspectivas no exige aceptarlas todas, pero sí examinarlas con respeto. Con el tiempo, este ejercicio fortalece nuestra capacidad de argumentar, tomar decisiones y distinguir entre una opinión y un hecho. Así, cada página puede convertirse en una oportunidad para aprender a pensar por nosotros mismos, con atención y curiosidad."], "word_count": 198}, {"title": "Compartir libros, compartir ideas", "category": "Lectura y comunidad", "paragraphs": ["La lectura suele imaginarse como una actividad silenciosa y solitaria. Sin embargo, los libros también pueden acercar a las personas. Cuando alguien recomienda una historia, cuenta cuál fue su personaje favorito o explica qué parte le sorprendió, abre una conversación. A veces, dos lectores llegan a conclusiones distintas sobre el mismo final, y esa diferencia vuelve más interesante el intercambio de ideas.", "En una biblioteca, en el salón de clases o en casa, compartir lecturas puede ser algo muy sencillo. Una persona puede leer un párrafo en voz alta y otra continuar. También se puede elegir un cuento corto y conversar después sobre el problema que enfrentaron sus personajes. Lo importante no es responder de manera perfecta, sino escuchar, preguntar y explicar lo que cada uno entendió. De ese modo, las historias dejan de quedarse solamente en las páginas.", "Leer en compañía también permite descubrir temas que antes no nos llamaban la atención. Tal vez un amigo disfruta los relatos de aventuras y otra persona prefiere los textos científicos. Al intercambiar recomendaciones, ambos amplían sus intereses. Los libros ofrecen puntos de encuentro entre experiencias diferentes y ayudan a construir conversaciones más profundas. Por eso, una lectura compartida puede convertirse en el comienzo de una amistad, una pregunta nueva o un proyecto creado entre varias personas."], "word_count": 215}]</script>
+<script>
+(() => {
+  'use strict';
+  const $ = id => document.getElementById(id);
+  const readings = JSON.parse($('readings-data').textContent);
+  const validColors = ['orange','red','blue','green'];
+  let connected = false;
+  let activePage = 'inicio';
+  let mode = 'cursor';
+  let chosenColor = 'red';
+  let currentReading = 0;
+  let student = '';
+  let marks = {};
+  let wordSpans = {};
+  let undoStack = [];
+  let lastUndoAt = 0;
+  let lastUndoMode = '';
+  let markKey = '';
+
+  function go(page){
+    if(page === 'panel' && !connected) page = 'docente';
+    activePage = page;
+    document.querySelectorAll('[data-page-area]').forEach(el => { el.hidden = el.id !== 'page-'+page; });
+    $('palette').hidden = true;
+    window.scrollTo(0,0);
+  }
+  document.querySelectorAll('[data-page]').forEach(btn => btn.addEventListener('click',()=>go(btn.dataset.page)));
+  $('site-brand').addEventListener('click',e => {e.preventDefault();go('inicio');});
+
+  async function api(path, fields){
+    const options = {credentials:'same-origin'};
+    if(fields !== undefined){
+      options.method='POST';
+      options.headers={'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8','X-Requested-With':'fetch'};
+      options.body=new URLSearchParams(fields);
+    }
+    const response = await fetch(path, options);
+    let data;
+    try { data = await response.json(); } catch (_) { throw new Error('Respuesta del servidor inválida.'); }
+    if(!response.ok) throw new Error(data.error || 'No se pudo completar la solicitud.');
+    return data;
+  }
+  async function checkConnection(){
+    try { const response = await api('/api/estado'); connected = !!response.servidor; }
+    catch(_) { connected=false; }
+    const msg=$('connection-message');
+    msg.classList.toggle('live',connected);
+    if(connected){
+      msg.innerHTML='<strong>Registro central activo.</strong> Los ingresos se guardan en la base de datos de este servidor. El docente puede consultarlos con su cuenta.';
+      try {
+        const ses=await api('/api/sesion');
+        if(ses.rol === 'docente') await loadPanel();
+      } catch(_) {}
+    } else {
+      msg.innerHTML='<strong>Vista de demostración.</strong> La lectura y el subrayado funcionan aquí, pero los nombres no se registran ni se comparten entre dispositivos. Para activar el registro docente, publica esta web usando el servidor Python incluido.';
+    }
+  }
+  checkConnection();
+  function showError(id, message){ const el=$(id);el.textContent=message;el.hidden=!message; }
+  function normalName(value){return value.trim().replace(/\s+/gu,' ');}
+  function validName(value){return value.length>=5&&value.length<=90&&value.split(' ').length>=2&&/^[\p{L} .'-]+$/u.test(value);}
+
+  $('student-form').addEventListener('submit', async e => {
+    e.preventDefault();
+    showError('student-error','');
+    const name=normalName($('student-name').value);
+    if(!validName(name)){showError('student-error','Escribe tu nombre y apellidos, sin números.');return;}
+    const btn=$('student-submit');btn.disabled=true;
+    try {
+      if(connected) await api('/api/estudiante',{nombre:name});
+      student=name;
+      openReading();
+    } catch(err) {showError('student-error',err.message);}
+    finally{btn.disabled=false;}
+  });
+  $('teacher-form').addEventListener('submit',async e => {
+    e.preventDefault();showError('teacher-error','');
+    if(!connected){showError('teacher-error','El panel docente solo funciona al abrir la web desde el servidor Python. No existe una contraseña de demostración.');return;}
+    const btn=$('teacher-submit');btn.disabled=true;
+    try {
+      await api('/api/docente/login',{usuario:$('teacher-user').value,contrasena:$('teacher-pass').value});
+      $('teacher-pass').value='';
+      await loadPanel();
+    } catch(err) {showError('teacher-error',err.message);}
+    finally{btn.disabled=false;}
+  });
+  async function loadPanel(){
+    const data=await api('/api/docente/registros');
+    $('total-visits').textContent=String(data.total);
+    $('total-unique').textContent=String(data.estudiantesDistintos);
+    const tbody=$('records-body');tbody.replaceChildren();
+    if(!data.registros.length){const tr=document.createElement('tr');const td=document.createElement('td');td.colSpan=3;td.className='empty';td.textContent='Todavía no hay registros.';tr.append(td);tbody.append(tr);}
+    for(const r of data.registros){
+      const tr=document.createElement('tr');
+      [r.id,r.nombre,r.fecha.replace('T',' ').slice(0,19)+' UTC'].forEach(v=>{const td=document.createElement('td');td.textContent=String(v);tr.append(td);});
+      tbody.append(tr);
+    }
+    go('panel');
+  }
+  async function logOut(){
+    if(connected){try{await api('/api/salir',{});}catch(_){}}
+    student='';
+    $('student-name').value='';
+    $('teacher-pass').value='';
+    go('inicio');
+  }
+  $('student-exit').addEventListener('click', logOut);
+  $('teacher-exit').addEventListener('click', logOut);
+
+  function wordify(node, key, text){
+    const words=[]; const fragment=document.createDocumentFragment();
+    for(const part of (text.match(/\S+|\s+/gu)||[])){
+      if(/^\s+$/u.test(part)){fragment.append(document.createTextNode(part));continue;}
+      const span=document.createElement('span');span.className='word';span.textContent=part;span.dataset.segment=key;span.dataset.index=String(words.length);words.push(span);fragment.append(span);
+    }
+    node.replaceChildren(fragment);
+    wordSpans[key]=words;
+    marks[key]=Array(words.length).fill(null);
+  }
+  function openReading(){
+    currentReading=Math.floor(Math.random()*readings.length);
+    const r=readings[currentReading];
+    wordSpans={};marks={};undoStack=[];
+    markKey='comunica-marcas-v5-'+cryptoKey()+'-'+currentReading;
+    $('student-greeting').textContent='Hola, '+student+'.';
+    $('reading-category').textContent=r.category;
+    wordify($('reading-title'),'titulo',r.title);
+    $('reading-body').replaceChildren();
+    r.paragraphs.forEach((paragraph,i)=>{const p=document.createElement('p');wordify(p,'p'+i,paragraph);$('reading-body').append(p);});
+    $('read-wordcount').textContent=r.paragraphs.join(' ').trim().split(/\s+/u).length+' palabras';
+    restoreMarks(); renderMarks(); setMode('cursor');go('lectura');
+  }
+  function cryptoKey(){
+    // Un nuevo ingreso crea una sesión de subrayado diferente en este dispositivo.
+    const data=new Uint32Array(2);
+    if(globalThis.crypto?.getRandomValues){crypto.getRandomValues(data);return Array.from(data).join('-');}
+    return String(Date.now())+'-'+String(Math.floor(Math.random()*1000000));
+  }
+  function saveMarks(){try{sessionStorage.setItem(markKey,JSON.stringify(marks));}catch(_){}}
+  function restoreMarks(){
+    try{
+      const old=JSON.parse(sessionStorage.getItem(markKey)||'null');
+      if(old&&typeof old==='object')Object.keys(marks).forEach(k=>{if(Array.isArray(old[k]))marks[k]=marks[k].map((_,i)=>validColors.includes(old[k][i])?old[k][i]:null);});
+    } catch(_){}
+  }
+  function renderMarks(){
+    let count=0;
+    for(const [key,spans] of Object.entries(wordSpans)){
+      spans.forEach((el,i)=>{const c=marks[key][i];if(c){el.dataset.mark=c;count++;}else delete el.dataset.mark;});
+    }
+    $('marks-count').textContent=String(count);
+    $('undo').disabled=undoStack.length===0;
+  }
+  function setMode(next){
+    mode=next;
+    $('annotation').dataset.mode=next;
+    $('tool-cursor').setAttribute('aria-pressed',String(next==='cursor'));
+    $('tool-pencil').setAttribute('aria-pressed',String(next==='paint'));
+    $('tool-eraser').setAttribute('aria-pressed',String(next==='erase'));
+    $('tool-pencil').style.setProperty('--active-color',{orange:'#ee9223',red:'#dc4a5d',blue:'#2d7fd2',green:'#22a274'}[chosenColor]);
+    const explanations={cursor:'Cursor activo. Puedes leer y desplazarte sin marcar.',paint:'Lápiz activo. Pasa sobre las palabras para subrayarlas.',erase:'Borrador activo. Pasa sobre una palabra marcada para borrarla.'};
+    $('painting-status').textContent=explanations[next];
+    $('palette').hidden=true;
+    $('tool-pencil').setAttribute('aria-expanded','false');
+  }
+  function closePalette(){ $('palette').hidden=true;$('tool-pencil').setAttribute('aria-expanded','false'); }
+  $('tool-cursor').addEventListener('click',()=>setMode('cursor'));
+  $('tool-eraser').addEventListener('click',()=>setMode('erase'));
+  $('tool-pencil').addEventListener('click',()=>{const open=$('palette').hidden;$('palette').hidden=!open;$('tool-pencil').setAttribute('aria-expanded',String(open));});
+  $('palette-close').addEventListener('click',closePalette);
+  document.querySelectorAll('[data-color]').forEach(btn=>btn.addEventListener('click',()=>{chosenColor=btn.dataset.color;setMode('paint');}));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closePalette();});
+  function doWord(word){
+    if(!word||mode==='cursor'||!word.classList.contains('word'))return;
+    if(!$('annotation').contains(word))return;
+    const key=word.dataset.segment;const idx=Number(word.dataset.index);
+    if(!Object.prototype.hasOwnProperty.call(marks,key)||!Number.isInteger(idx))return;
+    const next=mode==='erase'?null:chosenColor;
+    if(marks[key][idx]===next)return;
+    const now=Date.now();const kind=mode+'-'+chosenColor;
+    if(lastUndoMode!==kind||now-lastUndoAt>650){undoStack.push(JSON.stringify(marks));if(undoStack.length>75)undoStack.shift();}
+    lastUndoMode=kind;lastUndoAt=now;
+    marks[key][idx]=next;renderMarks();saveMarks();
+  }
+  function wordAtPointer(event){return document.elementFromPoint(event.clientX,event.clientY)?.closest('.word');}
+  $('annotation').addEventListener('pointerover',e=>{if(e.pointerType==='mouse')doWord(e.target.closest('.word'));});
+  $('annotation').addEventListener('pointerdown',e=>{
+    if(mode==='cursor')return;
+    if(e.pointerType!=='mouse'){e.preventDefault();try{$('annotation').setPointerCapture(e.pointerId);}catch(_){}}
+    doWord(wordAtPointer(e));
+  });
+  $('annotation').addEventListener('pointermove',e=>{if(mode==='cursor')return;if(e.pointerType==='mouse'||e.buttons)doWord(wordAtPointer(e));});
+  $('annotation').addEventListener('click',e=>{if(mode!=='cursor')doWord(e.target.closest('.word'));});
+  $('annotation').addEventListener('pointerup',e=>{if($('annotation').hasPointerCapture(e.pointerId))try{$('annotation').releasePointerCapture(e.pointerId);}catch(_){}});
+  $('undo').addEventListener('click',()=>{if(!undoStack.length)return;marks=JSON.parse(undoStack.pop());lastUndoMode='';lastUndoAt=0;renderMarks();saveMarks();});
+  $('clear').addEventListener('click',()=>{
+    if(!Object.values(marks).some(arr=>arr.some(Boolean)))return;
+    if(!window.confirm('¿Borrar todos los subrayados de esta lectura?'))return;
+    undoStack.push(JSON.stringify(marks));Object.keys(marks).forEach(k=>marks[k].fill(null));lastUndoMode='';renderMarks();saveMarks();
+  });
+})();
+</script>
+</body>
+</html>
